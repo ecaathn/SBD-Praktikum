@@ -1,0 +1,15 @@
+CREATE OR REPLACE PROCEDURE konverter_celcius AS
+    celcius NUMBER(32);
+    fahrenheit NUMBER(32);
+    reamur NUMBER(32);
+    kelvin NUMBER(32);
+BEGIN
+    celcius := 32;
+    fahrenheit := (9/5)*(celcius + 32);
+    reamur := (4/5) * celcius;
+    kelvin := celcius + 273;
+    DBMS_OUTPUT.PUT_LINE('celcius = ' || celcius);
+    DBMS_OUTPUT.PUT_LINE('fahrenheit = ' || fahrenheit);
+    DBMS_OUTPUT.PUT_LINE('reamur= ' || reamur);
+    DBMS_OUTPUT.PUT_LINE('kelvin = ' || kelvin);
+END;
